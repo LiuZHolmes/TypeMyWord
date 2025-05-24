@@ -43,18 +43,23 @@ def main():
     words = load_words(csv_path)
     random.shuffle(words)
     print('TypeMyWord - Type the correct word to continue. Type ? to show explanation, type exit to quit.')
+    show_explanation = False
     while words:
         entry = words.pop()
         while True:
             print(f"Word: {entry['word']}")
-            user_input = input('Please type the word (or ? for explanation): ').strip()
+            if show_explanation:
+                print(f"Explanation: {entry['explanation']}")
+            user_input = input('Please type the word (type ? to always show/hide explanation, exit to quit): ').strip()
             if user_input == 'exit':
                 print('Exited.')
                 sys.exit(0)
             if user_input == '?':
-                print(f"Explanation: {entry['explanation']}")
+                show_explanation = not show_explanation
+                print(f"Always show explanation: {'ON' if show_explanation else 'OFF'}")
                 continue
             if user_input == entry['word']:
+                os.system('cls' if os.name == 'nt' else 'clear')
                 print('Correct!\n')
                 break
             else:

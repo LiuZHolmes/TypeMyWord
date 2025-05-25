@@ -1,9 +1,13 @@
+import datetime
 import random
 import os
+import fsrs_rs_python
 from textual.app import App, ComposeResult
 from textual.widgets import Static, Input, Button, Select, Header, Footer, ProgressBar
 from textual.binding import Binding
 from service import words_loader
+
+desired_retention = 0.9
 
 class TypeMyWord(App):
     CSS_PATH = None
@@ -98,6 +102,17 @@ class TypeMyWord(App):
         if value == self.current.word:
             self.word_idx += 1
             self.status.update("")
+            next_states = fsrs_rs_python.next_states(self.current.memory_state, desired_retention, 0)
+            # Assume the card was reviewed and the rating was 'good'
+            next_state = next_states.good
+            interval = int(max(1, round(next_state.interval)))
+
+            # Update the card with the new memory state and interval
+            self.current.memory_state = next_state.memory
+            self.current.scheduled_days = interval
+            self.current.last_review = datetime.datetime.now(datetime.timezone.utc)
+            self.current.due = self.current.last_review + datetime.timedelta(days=interval)
+            
             await self.show_word()
         else:
             self.status.update("")
@@ -116,3 +131,9 @@ class TypeMyWord(App):
         if self.word_idx < len(self.words):
             self.word_idx += 1
             await self.show_word()
+
+    async def action_quit(self):
+        # 退出时保存数据
+        if self.selected_csv and self.words:
+            words_loader.save_words_to_csv(self.selected_csv, self.words)
+        self.exit()

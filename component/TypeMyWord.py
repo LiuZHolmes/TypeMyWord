@@ -101,26 +101,34 @@ class TypeMyWord(App):
             return
         value = event.value.strip()
         if value == self.current.word:
-            self.word_idx += 1
-            self.status.update("")
-            # Calculate the elapsed time since the last review
+            self.status.update("Rate with (1:again 2:hard 3:good 4:easy), default: 3 (good)")
+            self.input.value = ""
+            self.input.focus()
+            self.input_submitted_for_rating = True
+            return
+        # 评价分支
+        if hasattr(self, 'input_submitted_for_rating') and self.input_submitted_for_rating:
+            rating_map = {"1": "again", "2": "hard", "3": "good", "4": "easy"}
+            rating = event.value.strip()
+            if rating not in rating_map:
+                rating = "3"  # 默认good
+            rating_key = rating_map[rating]
             elapsed_days = 0
             if self.current.last_review is not None:
-                elapsed_days = (datetime.datetime.now(datetime.timezone.utc) 
-                            - self.current.last_review).days
-            # Get next states for an existing card
+                elapsed_days = (datetime.datetime.now(datetime.timezone.utc) - self.current.last_review).days
             next_states = fsrs.next_states(self.current.memory_state, desired_retention, elapsed_days)
-            # Assume the card was reviewed and the rating was 'good'
-            next_state = next_states.good
+            next_state = getattr(next_states, rating_key)
             interval = int(max(1, round(next_state.interval)))
-
-            # Update the card with the new memory state and interval
             self.current.memory_state = next_state.memory
             self.current.scheduled_days = interval
             self.current.last_review = datetime.datetime.now(datetime.timezone.utc)
             self.current.due = self.current.last_review + datetime.timedelta(days=interval)
-            
+            self.word_idx += 1
+            self.status.update("")
+            self.input_submitted_for_rating = False
+            self.input.placeholder = ""
             await self.show_word()
+            return
         else:
             self.status.update("")
             self.input.value = ""

@@ -50,10 +50,16 @@ python main.py
 ```
 
 ## Usage
-- At startup, select a word list by number (or press Enter to use the first one).
-- Type the correct word to continue.
-- Type `?` to show the explanation for the current word.
-- Type `exit` to quit the program.
+- At startup, select a word list using the dropdown (or use the default selection).
+- Type the correct word and press Enter to check your answer.
+- If correct, rate your memory of the word by pressing 1/2/3/4 (corresponding to again, hard, good, easy; press Enter for default 3=good). The system will intelligently schedule the next review based on the FSRS algorithm.
+- Press `Ctrl+E` to show/hide the explanation.
+- Press `Ctrl+B` to start the quiz.
+- Press `Ctrl+S` to skip the current word.
+- Press `Ctrl+K` to quit and save progress.
+
+## TODO
+- fix bug when rating with Input Method
 
 ## License
 MIT

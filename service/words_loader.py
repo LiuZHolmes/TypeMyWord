@@ -1,6 +1,8 @@
 import datetime
 import os
 import csv
+import json
+import re
 from typing import Optional
 from fsrs_rs_python import DEFAULT_PARAMETERS, FSRS, MemoryState
 
@@ -15,11 +17,17 @@ class Word:
         self.id = id
         self.word = word
         self.explanation = explanation
-        if due is None:
+        if memory_state is None:
             self.due = datetime.datetime.now(datetime.timezone.utc)
             self.memory_state: Optional[MemoryState] = None
             self.scheduled_days = 0
             self.last_review: Optional[datetime.date] = None
+        else:
+            self.due = due
+            self.memory_state = memory_state
+            self.scheduled_days = scheduled_days
+            self.last_review = last_review
+            
 
 def load_words_from_csv(selected_csv: str) -> list[Word]:
     words_dir = os.path.join(os.path.dirname(__file__), '../words')
@@ -27,9 +35,39 @@ def load_words_from_csv(selected_csv: str) -> list[Word]:
     words = []
     with open(csv_path, encoding='utf-8') as f:
         reader = csv.reader(f)
-        next(reader)  # 跳过表头
-        for _idx, row in enumerate(reader):
-            words.append(Word(row[0], row[1], row[2]))
+        header = next(reader)  # 读取表头
+        col_idx = {k: i for i, k in enumerate(header)}
+        for row in reader:
+            id = row[col_idx.get('id', 0)]
+            word = row[col_idx.get('word', 1)]
+            explanation = row[col_idx.get('explanation', 2)]
+            due = None
+            memory_state = None
+            scheduled_days = 0
+            last_review = None
+            if 'due' in col_idx and row[col_idx['due']]:
+                try:
+                    due = datetime.datetime.fromisoformat(row[col_idx['due']])
+                except Exception:
+                    due = None
+            # memory_state反序列化json
+            if 'memory_state' in col_idx and row[col_idx['memory_state']]:
+                try:
+                    ms = json.loads(row[col_idx['memory_state']])
+                    memory_state = MemoryState(ms["stability"], ms["difficulty"])
+                except Exception:
+                    memory_state = None
+            if 'scheduled_days' in col_idx and row[col_idx['scheduled_days']]:
+                try:
+                    scheduled_days = int(row[col_idx['scheduled_days']])
+                except Exception:
+                    scheduled_days = 0
+            if 'last_review' in col_idx and row[col_idx['last_review']]:
+                try:
+                    last_review = datetime.datetime.fromisoformat(row[col_idx['last_review']])
+                except Exception:
+                    last_review = None
+            words.append(Word(id, word, explanation, due, memory_state, scheduled_days, last_review))
     return words
 
 def load_words(selected_csv: str) -> list[Word]:
@@ -62,7 +100,19 @@ def save_words_to_csv(selected_csv: str, words: list[Word]):
             # 保留原有字段，更新指定字段
             row_dict = dict(zip(header, row))
             row_dict["due"] = w.due.isoformat() if hasattr(w, "due") and w.due else ""
-            row_dict["memory_state"] = str(w.memory_state) if hasattr(w, "memory_state") and w.memory_state else ""
+            # memory_state序列化为json
+            if hasattr(w, "memory_state") and w.memory_state:
+                s = str(w.memory_state)
+                # 用正则提取值
+                match = re.search(r"stability: ([\d.]+), difficulty: ([\d.]+)", s)
+                if match:
+                    stability = float(match.group(1))
+                    difficulty = float(match.group(2))
+                    row_dict["memory_state"] = json.dumps({
+                        "stability": stability,
+                        "difficulty": difficulty
+                    })
+
             row_dict["scheduled_days"] = str(w.scheduled_days) if hasattr(w, "scheduled_days") else ""
             row_dict["last_review"] = w.last_review.isoformat() if hasattr(w, "last_review") and w.last_review else ""
             # 按field_names顺序输出

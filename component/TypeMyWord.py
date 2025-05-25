@@ -1,21 +1,22 @@
 import datetime
 import random
 import os
-import fsrs_rs_python
+from fsrs_rs_python import DEFAULT_PARAMETERS, FSRS
 from textual.app import App, ComposeResult
 from textual.widgets import Static, Input, Button, Select, Header, Footer, ProgressBar
 from textual.binding import Binding
 from service import words_loader
 
 desired_retention = 0.9
+fsrs = FSRS(parameters=DEFAULT_PARAMETERS)
 
 class TypeMyWord(App):
     CSS_PATH = None
     BINDINGS = [
-        Binding("ctrl+q", "quit", "Quit", priority=True),
+        Binding("ctrl+k", "quit", "Quit", priority=True),
         Binding("ctrl+b", "click_start", show=False),
         Binding("ctrl+e", "toggle_explanation", "Show/Hide Explanation", priority=True),
-        Binding("ctrl+k", "skip_word", "Skip Word", priority=True),
+        Binding("ctrl+s", "skip_word", "Skip Word", priority=True),
     ]
 
     def __init__(self, **kwargs):
@@ -102,7 +103,13 @@ class TypeMyWord(App):
         if value == self.current.word:
             self.word_idx += 1
             self.status.update("")
-            next_states = fsrs_rs_python.next_states(self.current.memory_state, desired_retention, 0)
+            # Calculate the elapsed time since the last review
+            elapsed_days = 0
+            if self.current.last_review is not None:
+                elapsed_days = (datetime.datetime.now(datetime.timezone.utc) 
+                            - self.current.last_review).days
+            # Get next states for an existing card
+            next_states = fsrs.next_states(self.current.memory_state, desired_retention, elapsed_days)
             # Assume the card was reviewed and the rating was 'good'
             next_state = next_states.good
             interval = int(max(1, round(next_state.interval)))

@@ -85,8 +85,8 @@ class TypeMyWord(App):
             return
         self.current = self.words[self.word_idx]
         self.progress.update(progress=self.word_idx+1)
-        self.word_display.update(f"Word: {self.current['word']}")
-        self.explanation_display.update(f"Explanation: {self.current['explanation']}")
+        self.word_display.update(f"Word: {self.current.word}")
+        self.explanation_display.update(f"Explanation: {self.current.explanation}")
         self.explanation_display.visible = self.show_explanation
         self.input.value = ""
         self.input.focus()
@@ -95,7 +95,7 @@ class TypeMyWord(App):
         if not self.current:
             return
         value = event.value.strip()
-        if value == self.current['word']:
+        if value == self.current.word:
             self.word_idx += 1
             self.status.update("")
             await self.show_word()

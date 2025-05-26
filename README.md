@@ -62,6 +62,8 @@ python main.py
 - [ ] fix bug when rating with Input Method
 - [x] skip then rate
 - [ ] refactor to separate ui and core logic
+- [ ] add more words
+- [ ] supply more explanations
 
 ## License
 MIT

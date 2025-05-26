@@ -60,7 +60,7 @@ python main.py
 
 ## TODO
 - [ ] fix bug when rating with Input Method
-- [ ] skip then rate
+- [x] skip then rate
 - [ ] refactor to separate ui and core logic
 
 ## License

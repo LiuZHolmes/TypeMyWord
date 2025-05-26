@@ -10,12 +10,14 @@ from service import words_loader
 desired_retention = 0.9
 fsrs = FSRS(parameters=DEFAULT_PARAMETERS)
 
+
 class TypeMyWord(App):
     CSS_PATH = None
     BINDINGS = [
         Binding("ctrl+k", "quit", "Quit", priority=True),
         Binding("ctrl+b", "click_start", show=False),
-        Binding("ctrl+e", "toggle_explanation", "Show/Hide Explanation", priority=True),
+        Binding("ctrl+e", "toggle_explanation",
+                "Show/Hide Explanation", priority=True),
         Binding("ctrl+s", "skip_word", "Skip Word", priority=True),
     ]
 
@@ -49,7 +51,8 @@ class TypeMyWord(App):
     async def on_mount(self) -> None:
         # Scan for CSV files
         words_dir = os.path.join(os.path.dirname(__file__), '../words')
-        self.csv_files = [f for f in os.listdir(words_dir) if f.endswith('.csv')]
+        self.csv_files = [f for f in os.listdir(
+            words_dir) if f.endswith('.csv')]
         if not self.csv_files:
             self.status.update("No CSV files found in words/ directory.")
             return
@@ -91,7 +94,8 @@ class TypeMyWord(App):
         self.current = self.words[self.word_idx]
         self.progress.update(progress=self.word_idx+1)
         self.word_display.update(f"Word: {self.current.word}")
-        self.explanation_display.update(f"Explanation: {self.current.explanation}")
+        self.explanation_display.update(
+            f"Explanation: {self.current.explanation}")
         self.explanation_display.visible = self.show_explanation
         self.input.value = ""
         self.input.focus()
@@ -101,10 +105,7 @@ class TypeMyWord(App):
             return
         value = event.value.strip()
         if value == self.current.word:
-            self.status.update("Rate with (1:again 2:hard 3:good 4:easy), default: 3 (good)")
-            self.input.value = ""
-            self.input.focus()
-            self.input_submitted_for_rating = True
+            await self.pass_word()
             return
         # 评价分支
         if hasattr(self, 'input_submitted_for_rating') and self.input_submitted_for_rating:
@@ -115,14 +116,18 @@ class TypeMyWord(App):
             rating_key = rating_map[rating]
             elapsed_days = 0
             if self.current.last_review is not None:
-                elapsed_days = (datetime.datetime.now(datetime.timezone.utc) - self.current.last_review).days
-            next_states = fsrs.next_states(self.current.memory_state, desired_retention, elapsed_days)
+                elapsed_days = (datetime.datetime.now(
+                    datetime.timezone.utc) - self.current.last_review).days
+            next_states = fsrs.next_states(
+                self.current.memory_state, desired_retention, elapsed_days)
             next_state = getattr(next_states, rating_key)
             interval = int(max(1, round(next_state.interval)))
             self.current.memory_state = next_state.memory
             self.current.scheduled_days = interval
-            self.current.last_review = datetime.datetime.now(datetime.timezone.utc)
-            self.current.due = self.current.last_review + datetime.timedelta(days=interval)
+            self.current.last_review = datetime.datetime.now(
+                datetime.timezone.utc)
+            self.current.due = self.current.last_review + \
+                datetime.timedelta(days=interval)
             self.word_idx += 1
             self.status.update("")
             self.input_submitted_for_rating = False
@@ -142,13 +147,17 @@ class TypeMyWord(App):
         self.start_btn.press()
 
     async def action_skip_word(self):
-        """Skip the current word and move to the next one."""
-        if self.word_idx < len(self.words):
-            self.word_idx += 1
-            await self.show_word()
+        await self.pass_word()
 
     async def action_quit(self):
         # 退出时保存数据
         if self.selected_csv and self.words:
             words_loader.save_words_to_csv(self.selected_csv, self.words)
         self.exit()
+
+    async def pass_word(self):
+        self.status.update(
+            "Pass! Rate with (1:again 2:hard 3:good 4:easy), default: 3 (good)")
+        self.input.value = ""
+        self.input.focus()
+        self.input_submitted_for_rating = True

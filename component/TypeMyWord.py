@@ -6,6 +6,7 @@ from textual.app import App, ComposeResult
 from textual.widgets import Static, Input, Button, Select, Header, Footer, ProgressBar
 from textual.binding import Binding
 from service import words_loader
+from service.scheduler import get_next_states, update_word_state
 
 desired_retention = 0.9
 fsrs = FSRS(parameters=DEFAULT_PARAMETERS)
@@ -109,25 +110,8 @@ class TypeMyWord(App):
             return
         # 评价分支
         if hasattr(self, 'input_submitted_for_rating') and self.input_submitted_for_rating:
-            rating_map = {"1": "again", "2": "hard", "3": "good", "4": "easy"}
-            rating = event.value.strip()
-            if rating not in rating_map:
-                rating = "3"  # 默认good
-            rating_key = rating_map[rating]
-            elapsed_days = 0
-            if self.current.last_review is not None:
-                elapsed_days = (datetime.datetime.now(
-                    datetime.timezone.utc) - self.current.last_review).days
-            next_states = fsrs.next_states(
-                self.current.memory_state, desired_retention, elapsed_days)
-            next_state = getattr(next_states, rating_key)
-            interval = int(max(1, round(next_state.interval)))
-            self.current.memory_state = next_state.memory
-            self.current.scheduled_days = interval
-            self.current.last_review = datetime.datetime.now(
-                datetime.timezone.utc)
-            self.current.due = self.current.last_review + \
-                datetime.timedelta(days=interval)
+            next_states = get_next_states(self.current)
+            update_word_state(self.current, next_states, value)
             self.word_idx += 1
             self.status.update("")
             self.input_submitted_for_rating = False

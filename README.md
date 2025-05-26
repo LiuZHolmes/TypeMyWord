@@ -61,7 +61,7 @@ python main.py
 ## TODO
 - [ ] fix bug when rating with Input Method
 - [x] skip then rate
-- [ ] refactor to separate ui and core logic
+- [x] refactor to separate ui and core logic
 - [ ] add more words
 - [ ] supply more explanations
 

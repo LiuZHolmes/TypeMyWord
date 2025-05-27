@@ -59,7 +59,7 @@ python main.py
 - Press `Ctrl+K` to quit and save progress.
 
 ## TODO
-- [ ] fix bug when rating with Input Method
+- [x] fix bug when rating with Input Method
 - [x] skip then rate
 - [x] refactor to separate ui and core logic
 - [x] Update words from app and textbook daily

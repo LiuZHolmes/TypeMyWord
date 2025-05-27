@@ -1,6 +1,7 @@
 
 import datetime
 from fsrs_rs_python import DEFAULT_PARAMETERS, FSRS, MemoryState, NextStates
+from service.service import normalize_input
 from service.words_loader import Word
 
 desired_retention = 0.9
@@ -27,6 +28,7 @@ def get_next_states(word: Word) -> NextStates:
 
 def update_word_state(word: Word, next_states: NextStates, rating: str):
     rating_map = {"1": "again", "2": "hard", "3": "good", "4": "easy"}
+    rating = normalize_input(rating)
     if rating not in rating_map:
         rating = "3"  # default good
     rating_key = rating_map[rating]

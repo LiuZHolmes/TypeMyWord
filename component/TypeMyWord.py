@@ -1,9 +1,9 @@
-import datetime
 import random
 import os
 from fsrs_rs_python import DEFAULT_PARAMETERS, FSRS
 from textual.app import App, ComposeResult
-from textual.widgets import Static, Input, Button, Select, Header, Footer, ProgressBar
+from textual.containers import Vertical
+from textual.widgets import Static, Input, Button, Select, Header, Footer, ProgressBar, Label
 from textual.binding import Binding
 from service import words_loader
 from service.scheduler import get_next_states, update_word_state
@@ -16,82 +16,56 @@ class TypeMyWord(App):
     CSS_PATH = None
     BINDINGS = [
         Binding("ctrl+k", "quit", "Quit", priority=True),
-        Binding("ctrl+b", "click_start", show=False),
         Binding("ctrl+e", "toggle_explanation",
                 "Show/Hide Explanation", priority=True),
         Binding("ctrl+s", "skip_word", "Skip Word", priority=True),
     ]
 
-    def __init__(self, **kwargs):
+    def __init__(self, selected_csv=None, **kwargs):
         super().__init__(**kwargs)
         self.words = []
         self.current = None
         self.show_explanation = False
         self.word_idx = 0
-        self.csv_files = []
-        self.selected_csv = None
+        self.selected_csv = selected_csv  # Pass the selected CSV file directly
 
     def compose(self) -> ComposeResult:
-        yield Header()
-        self.select = Select(options=[], prompt="Select a word list:")
-        yield self.select
-        self.start_btn = Button("Start", id="start_btn")
-        yield self.start_btn
-        self.progress = ProgressBar(total=1, id="progress", show_eta=False)
-        yield self.progress
-        self.word_display = Static("", id="word")
-        yield self.word_display
-        self.explanation_display = Static("", id="explanation")
-        yield self.explanation_display
-        self.input = Input(id="input")
-        yield self.input
-        self.status = Static("", id="status")
-        yield self.status
-        yield Footer()
+        with Vertical(id="main_container", classes="container"):
+            self.word_display = Static("", id="word")
+            yield self.word_display
+            self.explanation_display = Static("", id="explanation")
+            yield self.explanation_display
+            self.input = Input(id="input", compact=True,)
+            yield self.input
+            self.status = Static("", id="status")
+            yield self.status
+        with Footer():
+            yield Label("TypeMyWord")
 
     async def on_mount(self) -> None:
-        # Scan for CSV files
-        words_dir = os.path.join(os.path.dirname(__file__), '../words')
-        self.csv_files = [f for f in os.listdir(
-            words_dir) if f.endswith('.csv')]
-        if not self.csv_files:
-            self.status.update("No CSV files found in words/ directory.")
+        # Load words from the selected CSV file
+        if not self.selected_csv:
+            self.exit("No CSV file provided.")
             return
-        self.select.set_options([(f, f) for f in self.csv_files])
-        self.select.value = self.csv_files[0]
-        self.input.visible = False
-        self.word_display.visible = False
-        self.explanation_display.visible = self.show_explanation
-        self.progress.visible = False
-
-    async def on_button_pressed(self, event):
-        if event.button.id == "start_btn":
-            self.selected_csv = self.select.value
-            self.progress.visible = True
-            await self.start()
-
-    async def start(self):
         self.words = words_loader.load_words(selected_csv=self.selected_csv)
+        if not self.words:
+            self.exit(f"No words found in {self.selected_csv}.")
+            return
         random.shuffle(self.words)
         self.word_idx = 0
         self.input.value = ""
         self.input.visible = True
         self.word_display.visible = True
-        self.status.update("")
-        self.select.visible = False
-        self.start_btn.visible = False
-        self.progress.update(total=len(self.words), progress=0)
+        self.explanation_display.visible = self.show_explanation
         await self.show_word()
 
     async def show_word(self):
         if self.word_idx >= len(self.words):
-            self.progress.update(progress=len(self.words))
-            self.word_display.update("Finished!")
+            self.word_display.update("Done")
             self.explanation_display.update("")
             self.input.visible = False
             return
         self.current = self.words[self.word_idx]
-        self.progress.update(progress=self.word_idx+1)
         self.word_display.update(f"Word: {self.current.word}")
         self.explanation_display.update(
             f"Explanation: {self.current.explanation}")
@@ -126,9 +100,6 @@ class TypeMyWord(App):
         self.show_explanation = not self.show_explanation
         await self.show_word()
 
-    async def action_click_start(self):
-        self.start_btn.press()
-
     async def action_skip_word(self):
         await self.pass_word()
 
@@ -139,8 +110,9 @@ class TypeMyWord(App):
         self.exit()
 
     async def pass_word(self):
+        self.word_display.update(f"Word: {self.current.word} ✔")
         self.status.update(
-            "Pass! Rate with (1:again 2:hard 3:good 4:easy), default: 3 (good)")
+            "Rate with 1:again 2:hard 3:good(default) 4:easy")
         self.input.value = ""
         self.input.focus()
         self.input_submitted_for_rating = True

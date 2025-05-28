@@ -31,7 +31,7 @@ class Word:
 
 
 def load_words_from_csv(selected_csv: str) -> list[Word]:
-    words_dir = os.path.join(os.path.dirname(__file__), '../words')
+    words_dir = os.path.join(os.path.dirname(__file__), '..')
     csv_path = os.path.join(words_dir, selected_csv)
     words = []
     with open(csv_path, encoding='utf-8') as f:
@@ -83,7 +83,7 @@ def load_words(selected_csv: str) -> list[Word]:
 
 
 def save_words_to_csv(selected_csv: str, words: list[Word]):
-    words_dir = os.path.join(os.path.dirname(__file__), '../words')
+    words_dir = os.path.join(os.path.dirname(__file__), '..')
     csv_path = os.path.join(words_dir, selected_csv)
     # 读取原始csv所有行
     with open(csv_path, encoding='utf-8') as f:

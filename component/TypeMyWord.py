@@ -3,7 +3,7 @@ import os
 from fsrs_rs_python import DEFAULT_PARAMETERS, FSRS
 from textual.app import App, ComposeResult
 from textual.containers import Vertical
-from textual.widgets import Static, Input, Button, Select, Header, Footer, ProgressBar, Label
+from textual.widgets import Static, Input, Footer
 from textual.binding import Binding
 from service import words_loader
 from service.scheduler import get_next_states, update_word_state
@@ -30,17 +30,8 @@ class TypeMyWord(App):
         self.selected_csv = selected_csv  # Pass the selected CSV file directly
 
     def compose(self) -> ComposeResult:
-        with Vertical(id="main_container", classes="container"):
-            self.word_display = Static("", id="word")
-            yield self.word_display
-            self.explanation_display = Static("", id="explanation")
-            yield self.explanation_display
-            self.input = Input(id="input", compact=True,)
-            yield self.input
-            self.status = Static("", id="status")
-            yield self.status
-        with Footer():
-            yield Label("TypeMyWord")
+        self.input = Input(id="input", compact=True)
+        yield self.input
 
     async def on_mount(self) -> None:
         # Load words from the selected CSV file
@@ -55,21 +46,17 @@ class TypeMyWord(App):
         self.word_idx = 0
         self.input.value = ""
         self.input.visible = True
-        self.word_display.visible = True
-        self.explanation_display.visible = self.show_explanation
         await self.show_word()
 
     async def show_word(self):
         if self.word_idx >= len(self.words):
-            self.word_display.update("Done")
-            self.explanation_display.update("")
-            self.input.visible = False
+            self.input.placeholder = "Done"
+            self.input.disabled = True
             return
         self.current = self.words[self.word_idx]
-        self.word_display.update(f"Word: {self.current.word}")
-        self.explanation_display.update(
-            f"Explanation: {self.current.explanation}")
-        self.explanation_display.visible = self.show_explanation
+        word_text = self.current.word
+        explanation_text = f": {self.current.explanation}" if self.show_explanation else ""
+        self.input.placeholder = (f"{word_text}{explanation_text}")
         self.input.value = ""
         self.input.focus()
 
@@ -85,14 +72,11 @@ class TypeMyWord(App):
             next_states = get_next_states(self.current)
             update_word_state(self.current, next_states, value)
             self.word_idx += 1
-            self.status.update("")
             self.input_submitted_for_rating = False
-            self.input.placeholder = ""
-            self.explanation_display.visible = self.show_explanation
             await self.show_word()
             return
         else:
-            self.status.update("")
+            self.input.placeholder = ""
             self.input.value = ""
             self.input.focus()
 
@@ -110,10 +94,7 @@ class TypeMyWord(App):
         self.exit()
 
     async def pass_word(self):
-        self.word_display.update(f"Word: {self.current.word} ✔")
-        self.status.update(
-            "Rate with 1:again 2:hard 3:good(default) 4:easy")
+        self.input.placeholder = "✔ Rate with 1:again 2:hard 3:good(default) 4:easy"
         self.input.value = ""
         self.input.focus()
         self.input_submitted_for_rating = True
-        self.explanation_display.visible = True

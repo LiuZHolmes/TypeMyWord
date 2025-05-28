@@ -61,7 +61,7 @@ class TypeMyWord(App):
         self.select.value = self.csv_files[0]
         self.input.visible = False
         self.word_display.visible = False
-        self.explanation_display.visible = True
+        self.explanation_display.visible = self.show_explanation
         self.progress.visible = False
 
     async def on_button_pressed(self, event):
@@ -74,11 +74,9 @@ class TypeMyWord(App):
         self.words = words_loader.load_words(selected_csv=self.selected_csv)
         random.shuffle(self.words)
         self.word_idx = 0
-        self.show_explanation = True
         self.input.value = ""
         self.input.visible = True
         self.word_display.visible = True
-        self.explanation_display.visible = False
         self.status.update("")
         self.select.visible = False
         self.start_btn.visible = False
@@ -116,6 +114,7 @@ class TypeMyWord(App):
             self.status.update("")
             self.input_submitted_for_rating = False
             self.input.placeholder = ""
+            self.explanation_display.visible = self.show_explanation
             await self.show_word()
             return
         else:
@@ -145,3 +144,4 @@ class TypeMyWord(App):
         self.input.value = ""
         self.input.focus()
         self.input_submitted_for_rating = True
+        self.explanation_display.visible = True

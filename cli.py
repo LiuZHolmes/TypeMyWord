@@ -1,12 +1,10 @@
 # 用 prompt_toolkit 实现简洁命令行交互版 TypeMyWord
 import os
 import random
-from prompt_toolkit import prompt
-from prompt_toolkit.completion import WordCompleter
+from prompt_toolkit import PromptSession
 from prompt_toolkit.shortcuts import clear
 from service import words_loader
 from service.scheduler import get_next_states, update_word_state
-from service.service import normalize_input
 
 
 def list_csv_files(directory):
@@ -25,9 +23,9 @@ def select_csv(words_dir):
     for idx, file in enumerate(csv_files, start=1):
         print(f"{idx}. {file}")
     while True:
-        choice = prompt("Choose file #: ")
+        choice = input("Choose file #: ")
         if choice.isdigit() and 1 <= int(choice) <= len(csv_files):
-            return os.path.join(words_dir, csv_files[int(choice)-1])
+            return os.path.join(words_dir, csv_files[int(choice) - 1])
         print("Invalid. Try again.")
 
 
@@ -45,21 +43,34 @@ def main():
         return
     random.shuffle(words)
     word_idx = 0
+    session = PromptSession()  # 使用 PromptSession 实现动态交互
     while word_idx < len(words):
         clear()
         current = words[word_idx]
         word_text = current.word
-        explanation_text = ""
-        user_input = prompt(f"{word_text}\n> ").strip()
-        if user_input.lower() in ("quit", "exit"):
+        explanation_text = f"{current.explanation}"
+        rate_placeholder = "Rate: 1 (again), 2 (hard), 3 (good, default), 4 (easy)"
+
+        # 使用 placeholder 显示当前单词
+        user_input = session.prompt(
+            "> ",
+            default="",
+            placeholder=word_text,  # 将单词作为 placeholder 显示
+        ).strip()
+
+        if user_input.lower() in ("quit", "q"):
             break
         if user_input.lower() == "skip":
             word_idx += 1
             continue
         if user_input == word_text:
-            # pass后rate时显示释义
-            explanation_text = f"{current.explanation}"
-            rating = prompt(f"{explanation_text}\n> ").strip()
+            # 显示释义和评分说明
+            rating = session.prompt(
+                "> ",
+                default="",
+                # 显示释义和评分说明
+                placeholder=f"{explanation_text}. {rate_placeholder}",
+            ).strip()
             next_states = get_next_states(current)
             update_word_state(current, next_states, rating)
             word_idx += 1

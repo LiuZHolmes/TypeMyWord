@@ -12,6 +12,7 @@ from service.service import normalize_input
 def list_csv_files(directory):
     return [f for f in os.listdir(directory) if f.endswith(".csv")]
 
+
 def select_csv(words_dir):
     csv_files = list_csv_files(words_dir)
     if not csv_files:
@@ -29,6 +30,7 @@ def select_csv(words_dir):
             return os.path.join(words_dir, csv_files[int(choice)-1])
         print("Invalid. Try again.")
 
+
 def main():
     words_dir = os.path.join(os.getcwd(), "words")
     if not os.path.exists(words_dir):
@@ -43,7 +45,6 @@ def main():
         return
     random.shuffle(words)
     word_idx = 0
-    print("\nTypeMyWord CLI (type quit to exit, skip to skip)\n")
     while word_idx < len(words):
         clear()
         current = words[word_idx]
@@ -66,6 +67,7 @@ def main():
             continue
     words_loader.save_words_to_csv(selected_csv, words)
     clear()
+
 
 if __name__ == "__main__":
     main()

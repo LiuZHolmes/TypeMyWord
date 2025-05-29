@@ -1,3 +1,4 @@
 # No external dependencies required for basic usage
 textual
 fsrs_rs_python
+prompt_toolkit

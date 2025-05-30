@@ -16,14 +16,6 @@ def get_next_states(word: Word) -> NextStates:
     next_states = fsrs.next_states(
         word.memory_state, desired_retention, elapsed_days)
     return next_states
-    """根据当前单词的记忆状态获取下一个状态"""
-    if word.memory_state is None:
-        return fsrs.next_states(MemoryState(0, 0), desired_retention, 0)
-    elapsed_days = 0
-    if word.last_review is not None:
-        elapsed_days = (datetime.datetime.now(
-            datetime.timezone.utc) - word.last_review).days
-    return fsrs.next_states(word.memory_state, desired_retention, elapsed_days)
 
 
 def update_word_state(word: Word, next_states: NextStates, rating: str):

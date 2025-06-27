@@ -12,3 +12,16 @@ id,word,explanation,due,memory_state,scheduled_days,last_review
 11,efficacy,n. effectiveness,2025-06-29T08:12:06.200147+00:00,"{""stability"": 3.173, ""difficulty"": 5.2824345}",3,2025-06-26T08:12:06.200147+00:00
 12,vehemently,adv. In a forceful manner,2025-06-27T08:10:26.019399+00:00,"{""stability"": 1.18385, ""difficulty"": 6.488305}",1,2025-06-26T08:10:26.019399+00:00
 13,adhere,v. stick to/follow,2025-07-12T08:11:45.314823+00:00,"{""stability"": 15.69105, ""difficulty"": 3.2245016}",16,2025-06-26T08:11:45.314823+00:00
+14,grapple,v. struggle with,2025-06-30T02:10:52.450850+00:00,"{""stability"": 3.173, ""difficulty"": 5.2824345}",3,2025-06-27T02:10:52.450850+00:00
+15,enthanasia,n. Mercy killing for relief,2025-06-28T02:10:06.834060+00:00,"{""stability"": 1.18385, ""difficulty"": 6.488305}",1,2025-06-27T02:10:06.834060+00:00
+16,enact,v. make into law,2025-06-30T02:11:28.056115+00:00,"{""stability"": 3.173, ""difficulty"": 5.2824345}",3,2025-06-27T02:11:28.056115+00:00
+17,fraught,adj. filled with/likely to result in,2025-06-30T02:11:03.977765+00:00,"{""stability"": 3.173, ""difficulty"": 5.2824345}",3,2025-06-27T02:11:03.977765+00:00
+18,cease,v. stop/come to an end,2025-07-13T02:11:09.724382+00:00,"{""stability"": 15.69105, ""difficulty"": 3.2245016}",16,2025-06-27T02:11:09.724382+00:00
+19,liquidate,v. convert to cash,2025-06-30T02:11:22.783434+00:00,"{""stability"": 3.173, ""difficulty"": 5.2824345}",3,2025-06-27T02:11:22.783434+00:00
+20,anticipate,v. expect/predict,2025-06-30T02:11:16.973565+00:00,"{""stability"": 3.173, ""difficulty"": 5.2824345}",3,2025-06-27T02:11:16.973565+00:00
+21,captive,n. prisoner/held under control,2025-06-30T02:09:55.559586+00:00,"{""stability"": 3.173, ""difficulty"": 5.2824345}",3,2025-06-27T02:09:55.559586+00:00
+22,formidable,adj. inspiring fear/respect,2025-06-30T02:11:44.293445+00:00,"{""stability"": 3.173, ""difficulty"": 5.2824345}",3,2025-06-27T02:11:44.293445+00:00
+23,exacerbate,v. worsen/intensify,2025-06-28T02:10:28.651906+00:00,"{""stability"": 0.40255, ""difficulty"": 7.1949}",1,2025-06-27T02:10:28.651906+00:00
+24,predominantly,adv. mainly/mostly,2025-06-30T02:10:36.570072+00:00,"{""stability"": 3.173, ""difficulty"": 5.2824345}",3,2025-06-27T02:10:36.570072+00:00
+25,stigma,n. mark of shame/disgrace,2025-06-30T02:10:47.079503+00:00,"{""stability"": 3.173, ""difficulty"": 5.2824345}",3,2025-06-27T02:10:47.079503+00:00
+26,precipitate,v. cause to happen suddenly,2025-06-28T02:11:52.224059+00:00,"{""stability"": 1.18385, ""difficulty"": 6.488305}",1,2025-06-27T02:11:52.224059+00:00

@@ -1,27 +1,27 @@
 id,word,explanation,due,memory_state,scheduled_days,last_review
-1,burgeoning,adj. growing rapidly,2025-07-06T03:51:35.948434+00:00,"{""stability"": 5.43636, ""difficulty"": 6.0349507}",5,2025-07-01T03:51:35.948434+00:00
-2,commence,v. begin/start,2025-07-04T05:20:22.286144+00:00,"{""stability"": 1.6574206, ""difficulty"": 8.060449}",2,2025-07-02T05:20:22.286144+00:00
+1,burgeoning,adj. growing rapidly,2025-07-15T01:27:41.203396+00:00,"{""stability"": 7.819979, ""difficulty"": 6.6624584}",8,2025-07-07T01:27:41.203396+00:00
+2,commence,v. begin/start,2025-07-23T01:29:15.093172+00:00,"{""stability"": 16.280674, ""difficulty"": 7.7249265}",16,2025-07-07T01:29:15.093172+00:00
 3,fleet,n. group of ships/vehicles,2025-07-14T03:50:36.526428+00:00,"{""stability"": 12.949931, ""difficulty"": 5.272968}",13,2025-07-01T03:50:36.526428+00:00
-4,adorn,v. decorate,2025-07-05T06:51:03.656351+00:00,"{""stability"": 2.0612185, ""difficulty"": 7.7941027}",2,2025-07-03T06:51:03.656351+00:00
+4,adorn,v. decorate,2025-07-13T01:27:28.956912+00:00,"{""stability"": 6.3093586, ""difficulty"": 7.7730827}",6,2025-07-07T01:27:28.956912+00:00
 5,hail,v. praise,2025-07-12T08:11:33.373552+00:00,"{""stability"": 15.69105, ""difficulty"": 3.2245016}",16,2025-06-26T08:11:33.373552+00:00
 6,culmination,n. climax/peak,2025-07-14T03:52:09.350719+00:00,"{""stability"": 12.949931, ""difficulty"": 5.272968}",13,2025-07-01T03:52:09.350719+00:00
-7,prowess,n. skill/expertise,2025-07-04T06:51:50.111156+00:00,"{""stability"": 0.1442858, ""difficulty"": 9.081172}",1,2025-07-03T06:51:50.111156+00:00
-8,skepticism,n. doubt/questioning,2025-07-04T05:21:49.050286+00:00,"{""stability"": 1.6087232, ""difficulty"": 7.2978597}",2,2025-07-02T05:21:49.050286+00:00
+7,prowess,n. skill/expertise,2025-07-08T01:28:36.492360+00:00,"{""stability"": 0.10249236, ""difficulty"": 9.351049}",1,2025-07-07T01:28:36.492360+00:00
+8,skepticism,n. doubt/questioning,2025-07-08T01:28:58.257013+00:00,"{""stability"": 0.8152532, ""difficulty"": 8.152023}",1,2025-07-07T01:28:58.257013+00:00
 9,ostensibly,adv. Apparently true but not,2025-07-14T03:52:48.993894+00:00,"{""stability"": 12.949931, ""difficulty"": 5.272968}",13,2025-07-01T03:52:48.993894+00:00
-10,admonish,v. warn,2025-07-04T06:51:12.480477+00:00,"{""stability"": 0.28701296, ""difficulty"": 8.499875}",1,2025-07-03T06:51:12.480477+00:00
+10,admonish,v. warn,2025-07-10T01:26:51.998612+00:00,"{""stability"": 2.63497, ""difficulty"": 8.475609}",3,2025-07-07T01:26:51.998612+00:00
 11,efficacy,n. effectiveness,2025-08-02T03:52:01.056162+00:00,"{""stability"": 32.40407, ""difficulty"": 4.5109854}",32,2025-07-01T03:52:01.056162+00:00
-12,vehemently,adv. In a forceful manner,2025-07-04T05:20:31.712032+00:00,"{""stability"": 2.439253, ""difficulty"": 7.5875487}",2,2025-07-02T05:20:31.712032+00:00
+12,vehemently,adv. In a forceful manner,2025-07-08T01:29:10.853978+00:00,"{""stability"": 0.9635291, ""difficulty"": 8.346799}",1,2025-07-07T01:29:10.853978+00:00
 13,adhere,v. stick to/follow,2025-07-12T08:11:45.314823+00:00,"{""stability"": 15.69105, ""difficulty"": 3.2245016}",16,2025-06-26T08:11:45.314823+00:00
 14,grapple,v. struggle with,2025-07-14T03:52:54.261971+00:00,"{""stability"": 12.949931, ""difficulty"": 5.272968}",13,2025-07-01T03:52:54.261971+00:00
-15,enthanasia,n. Mercy killing for relief,2025-07-04T05:21:57.075237+00:00,"{""stability"": 2.439253, ""difficulty"": 7.5875487}",2,2025-07-02T05:21:57.075237+00:00
+15,enthanasia,n. Mercy killing for relief,2025-07-15T01:28:24.351821+00:00,"{""stability"": 8.2471, ""difficulty"": 7.5674787}",8,2025-07-07T01:28:24.351821+00:00
 16,enact,v. make into law,2025-08-02T03:50:04.900762+00:00,"{""stability"": 32.40407, ""difficulty"": 4.5109854}",32,2025-07-01T03:50:04.900762+00:00
 17,fraught,adj. filled with/likely to result in,2025-07-14T03:49:37.111309+00:00,"{""stability"": 12.949931, ""difficulty"": 5.272968}",13,2025-07-01T03:49:37.111309+00:00
 18,cease,v. stop/come to an end,2025-07-13T02:11:09.724382+00:00,"{""stability"": 15.69105, ""difficulty"": 3.2245016}",16,2025-06-27T02:11:09.724382+00:00
 19,liquidate,v. convert to cash,2025-08-02T03:49:47.912318+00:00,"{""stability"": 32.40407, ""difficulty"": 4.5109854}",32,2025-07-01T03:49:47.912318+00:00
 20,anticipate,v. expect/predict,2025-07-14T03:50:27.607370+00:00,"{""stability"": 12.949931, ""difficulty"": 5.272968}",13,2025-07-01T03:50:27.607370+00:00
-21,captive,n. prisoner/held under control,2025-07-05T05:21:33.036626+00:00,"{""stability"": 3.230429, ""difficulty"": 6.7804995}",3,2025-07-02T05:21:33.036626+00:00
-22,formidable,adj. inspiring fear/respect,2025-07-06T03:52:20.961429+00:00,"{""stability"": 5.43636, ""difficulty"": 6.0349507}",5,2025-07-01T03:52:20.961429+00:00
-23,exacerbate,v. worsen/intensify,2025-07-04T06:52:01.538845+00:00,"{""stability"": 1.2295461, ""difficulty"": 8.654689}",1,2025-07-03T06:52:01.538845+00:00
+21,captive,n. prisoner/held under control,2025-07-17T01:26:56.986152+00:00,"{""stability"": 10.446033, ""difficulty"": 6.764142}",10,2025-07-07T01:26:56.986152+00:00
+22,formidable,adj. inspiring fear/respect,2025-07-23T01:28:12.631644+00:00,"{""stability"": 15.73277, ""difficulty"": 6.0220227}",16,2025-07-07T01:28:12.631644+00:00
+23,exacerbate,v. worsen/intensify,2025-07-11T01:29:25.751362+00:00,"{""stability"": 4.2555075, ""difficulty"": 8.62971}",4,2025-07-07T01:29:25.751362+00:00
 24,predominantly,adv. mainly/mostly,2025-07-14T03:51:48.432737+00:00,"{""stability"": 12.949931, ""difficulty"": 5.272968}",13,2025-07-01T03:51:48.432737+00:00
 25,stigma,n. mark of shame/disgrace,2025-07-09T05:21:37.472402+00:00,"{""stability"": 7.4293485, ""difficulty"": 6.2631392}",7,2025-07-02T05:21:37.472402+00:00
-26,precipitate,v. cause to happen suddenly,2025-07-04T06:51:45.105400+00:00,"{""stability"": 0.6635125, ""difficulty"": 8.601565}",1,2025-07-03T06:51:45.105400+00:00
+26,precipitate,v. cause to happen suddenly,2025-07-11T01:27:13.431666+00:00,"{""stability"": 3.5043046, ""difficulty"": 8.576831}",4,2025-07-07T01:27:13.431666+00:00

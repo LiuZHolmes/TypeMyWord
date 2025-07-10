@@ -5,10 +5,10 @@ id,word,explanation,due,memory_state,scheduled_days,last_review
 4,adorn,v. decorate,2025-07-13T01:27:28.956912+00:00,"{""stability"": 6.3093586, ""difficulty"": 7.7730827}",6,2025-07-07T01:27:28.956912+00:00
 5,hail,v. praise,2025-07-12T08:11:33.373552+00:00,"{""stability"": 15.69105, ""difficulty"": 3.2245016}",16,2025-06-26T08:11:33.373552+00:00
 6,culmination,n. climax/peak,2025-07-14T03:52:09.350719+00:00,"{""stability"": 12.949931, ""difficulty"": 5.272968}",13,2025-07-01T03:52:09.350719+00:00
-7,prowess,n. skill/expertise,2025-07-10T07:55:00.752197+00:00,"{""stability"": 0.934454, ""difficulty"": 9.322867}",1,2025-07-09T07:55:00.752197+00:00
+7,prowess,n. skill/expertise,2025-07-13T09:01:56.097906+00:00,"{""stability"": 3.4612966, ""difficulty"": 9.185445}",3,2025-07-10T09:01:56.097906+00:00
 8,skepticism,n. doubt/questioning,2025-07-12T07:54:52.288968+00:00,"{""stability"": 3.3850007, ""difficulty"": 8.129356}",3,2025-07-09T07:54:52.288968+00:00
 9,ostensibly,adv. Apparently true but not,2025-07-14T03:52:48.993894+00:00,"{""stability"": 12.949931, ""difficulty"": 5.272968}",13,2025-07-01T03:52:48.993894+00:00
-10,admonish,v. warn,2025-07-10T01:26:51.998612+00:00,"{""stability"": 2.63497, ""difficulty"": 8.475609}",3,2025-07-07T01:26:51.998612+00:00
+10,admonish,v. warn,2025-07-16T09:01:52.373913+00:00,"{""stability"": 5.9848595, ""difficulty"": 8.451454}",6,2025-07-10T09:01:52.373913+00:00
 11,efficacy,n. effectiveness,2025-08-02T03:52:01.056162+00:00,"{""stability"": 32.40407, ""difficulty"": 4.5109854}",32,2025-07-01T03:52:01.056162+00:00
 12,vehemently,adv. In a forceful manner,2025-07-12T07:54:42.603880+00:00,"{""stability"": 3.3881245, ""difficulty"": 8.323236}",3,2025-07-09T07:54:42.603880+00:00
 13,adhere,v. stick to/follow,2025-07-12T08:11:45.314823+00:00,"{""stability"": 15.69105, ""difficulty"": 3.2245016}",16,2025-06-26T08:11:45.314823+00:00

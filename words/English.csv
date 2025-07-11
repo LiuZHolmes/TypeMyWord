@@ -1,4 +1,4 @@
-id,word,explanation,due,memory_state,scheduled_days,last_review
+id,word,explanation,due,memory_state,scheduled_days,last_review,sentence
 1,burgeoning,adj. growing rapidly,2025-07-15T01:27:41.203396+00:00,"{""stability"": 7.819979, ""difficulty"": 6.6624584}",8,2025-07-07T01:27:41.203396+00:00
 2,commence,v. begin/start,2025-07-23T01:29:15.093172+00:00,"{""stability"": 16.280674, ""difficulty"": 7.7249265}",16,2025-07-07T01:29:15.093172+00:00
 3,fleet,n. group of ships/vehicles,2025-07-14T03:50:36.526428+00:00,"{""stability"": 12.949931, ""difficulty"": 5.272968}",13,2025-07-01T03:50:36.526428+00:00
@@ -21,7 +21,7 @@ id,word,explanation,due,memory_state,scheduled_days,last_review
 20,anticipate,v. expect/predict,2025-07-14T03:50:27.607370+00:00,"{""stability"": 12.949931, ""difficulty"": 5.272968}",13,2025-07-01T03:50:27.607370+00:00
 21,captive,n. prisoner/held under control,2025-07-17T01:26:56.986152+00:00,"{""stability"": 10.446033, ""difficulty"": 6.764142}",10,2025-07-07T01:26:56.986152+00:00
 22,formidable,adj. inspiring fear/respect,2025-07-23T01:28:12.631644+00:00,"{""stability"": 15.73277, ""difficulty"": 6.0220227}",16,2025-07-07T01:28:12.631644+00:00
-23,exacerbate,v. worsen/intensify,2025-07-11T01:29:25.751362+00:00,"{""stability"": 4.2555075, ""difficulty"": 8.62971}",4,2025-07-07T01:29:25.751362+00:00
+23,exacerbate,v. worsen/intensify,2025-07-19T03:54:09.742801+00:00,"{""stability"": 8.296042, ""difficulty"": 8.604846}",8,2025-07-11T03:54:09.742801+00:00
 24,predominantly,adv. mainly/mostly,2025-07-14T03:51:48.432737+00:00,"{""stability"": 12.949931, ""difficulty"": 5.272968}",13,2025-07-01T03:51:48.432737+00:00
 25,stigma,n. mark of shame/disgrace,2025-07-30T07:54:56.601291+00:00,"{""stability"": 20.64901, ""difficulty"": 6.2491617}",21,2025-07-09T07:54:56.601291+00:00
-26,precipitate,v. cause to happen suddenly,2025-07-11T01:27:13.431666+00:00,"{""stability"": 3.5043046, ""difficulty"": 8.576831}",4,2025-07-07T01:27:13.431666+00:00
+26,precipitate,v. cause to happen suddenly,2025-07-15T03:53:59.250139+00:00,"{""stability"": 4.4634004, ""difficulty"": 8.782081}",4,2025-07-11T03:53:59.250139+00:00,The sudden withdrawal of funding threatened to precipitate a crisis in the research project.

@@ -1,6 +1,6 @@
 id,word,explanation,due,memory_state,scheduled_days,last_review,sentence
 1,burgeoning,adj. growing rapidly/surging,2025-08-05T05:11:31.507416+00:00,"{""stability"": 21.458612, ""difficulty"": 6.6466436}",21,2025-07-15T05:11:31.507416+00:00,
-2,commence,v. begin/start,2025-07-23T01:29:15.093172+00:00,"{""stability"": 16.280674, ""difficulty"": 7.7249265}",16,2025-07-07T01:29:15.093172+00:00,
+2,commence,v. begin/start,2025-08-28T01:02:40.668913+00:00,"{""stability"": 35.229244, ""difficulty"": 7.7042246}",35,2025-07-24T01:02:40.668913+00:00,
 3,fleet,n. group of ships/vehicles,2025-08-26T05:12:07.018300+00:00,"{""stability"": 42.45255, ""difficulty"": 5.263545}",42,2025-07-15T05:12:07.018300+00:00,
 4,adorn,v. decorate,2025-08-13T00:31:36.844578+00:00,"{""stability"": 29.82118, ""difficulty"": 7.392467}",30,2025-07-14T00:31:36.844578+00:00,
 5,hail,v. praise,2025-09-15T00:31:06.610110+00:00,"{""stability"": 63.218002, ""difficulty"": 3.2245016}",63,2025-07-14T00:31:06.610110+00:00,
@@ -18,13 +18,13 @@ id,word,explanation,due,memory_state,scheduled_days,last_review,sentence
 17,fraught,adj. filled with/likely to result in,2025-08-26T05:12:53.309773+00:00,"{""stability"": 42.45255, ""difficulty"": 5.263545}",42,2025-07-15T05:12:53.309773+00:00,
 18,cease,v. stop/come to an end,2025-09-13T00:31:01.663754+00:00,"{""stability"": 60.708263, ""difficulty"": 3.2245016}",61,2025-07-14T00:31:01.663754+00:00,
 19,liquidate,v. convert to cash,2025-08-02T03:49:47.912318+00:00,"{""stability"": 32.40407, ""difficulty"": 4.5109854}",32,2025-07-01T03:49:47.912318+00:00,
-20,anticipate,v. expect/predict,2025-07-24T00:44:44.852913+00:00,"{""stability"": 6.314956, ""difficulty"": 6.774164}",6,2025-07-18T00:44:44.852913+00:00,
+20,anticipate,v. expect/predict,2025-08-10T01:02:36.199919+00:00,"{""stability"": 16.613129, ""difficulty"": 6.757836}",17,2025-07-24T01:02:36.199919+00:00,
 21,captive,n. prisoner/held under control,2025-08-14T00:44:53.003124+00:00,"{""stability"": 26.636782, ""difficulty"": 6.7478595}",27,2025-07-18T00:44:53.003124+00:00,
-22,formidable,adj. inspiring fear/respect,2025-07-23T01:28:12.631644+00:00,"{""stability"": 15.73277, ""difficulty"": 6.0220227}",16,2025-07-07T01:28:12.631644+00:00,
+22,formidable,adj. inspiring fear/respect,2025-09-07T01:03:22.433173+00:00,"{""stability"": 44.552086, ""difficulty"": 6.0091543}",45,2025-07-24T01:03:22.433173+00:00,
 23,exacerbate,v. worsen/intensify,2025-08-07T01:37:30.271737+00:00,"{""stability"": 16.65725, ""difficulty"": 8.580096}",17,2025-07-21T01:37:30.271737+00:00,
 24,predominantly,adv. mainly/mostly,2025-08-26T05:13:00.515761+00:00,"{""stability"": 42.45255, ""difficulty"": 5.263545}",42,2025-07-15T05:13:00.515761+00:00,
 25,stigma,n. mark of shame/disgrace,2025-07-30T07:54:56.601291+00:00,"{""stability"": 20.64901, ""difficulty"": 6.2491617}",21,2025-07-09T07:54:56.601291+00:00,
-26,precipitate,v. cause to happen suddenly,2025-07-23T05:11:45.975441+00:00,"{""stability"": 8.239548, ""difficulty"": 8.7565155}",8,2025-07-15T05:11:45.975441+00:00,The sudden withdrawal of funding threatened to precipitate a crisis in the research project.
+26,precipitate,v. cause to happen suddenly,2025-07-26T01:02:54.977935+00:00,"{""stability"": 1.7754283, ""difficulty"": 9.132764}",2,2025-07-24T01:02:54.977935+00:00,The sudden withdrawal of funding threatened to precipitate a crisis in the research project.
 27,staggering,adj. very shocking or suprising,2025-07-26T01:36:49.373799+00:00,"{""stability"": 5.43636, ""difficulty"": 6.0349507}",5,2025-07-21T01:36:49.373799+00:00,
 28,etch sth in the annals of,铭刻在...历史,2025-08-03T01:37:43.669891+00:00,"{""stability"": 12.949931, ""difficulty"": 5.272968}",13,2025-07-21T01:37:43.669891+00:00,
 29,unparalleled,adj. without equal or match,2025-07-26T01:37:02.934832+00:00,"{""stability"": 5.43636, ""difficulty"": 6.0349507}",5,2025-07-21T01:37:02.934832+00:00,

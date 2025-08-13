@@ -2,7 +2,7 @@ id,word,explanation,due,memory_state,scheduled_days,last_review,sentence
 1,burgeoning,adj. growing rapidly/surging,2025-09-27T05:16:48.336717+00:00,"{""stability"": 53.45967, ""difficulty"": 6.630902}",53,2025-08-05T05:16:48.336717+00:00,
 2,commence,v. begin/start,2025-08-28T01:02:40.668913+00:00,"{""stability"": 35.229244, ""difficulty"": 7.7042246}",35,2025-07-24T01:02:40.668913+00:00,
 3,fleet,n. group of ships/vehicles,2025-08-26T05:12:07.018300+00:00,"{""stability"": 42.45255, ""difficulty"": 5.263545}",42,2025-07-15T05:12:07.018300+00:00,
-4,adorn,v. decorate,2025-08-13T00:31:36.844578+00:00,"{""stability"": 29.82118, ""difficulty"": 7.392467}",30,2025-07-14T00:31:36.844578+00:00,
+4,adorn,v. decorate,2025-08-16T00:35:50.985971+00:00,"{""stability"": 3.4395745, ""difficulty"": 8.215632}",3,2025-08-13T00:35:50.985971+00:00,
 5,hail,v. praise,2025-09-15T00:31:06.610110+00:00,"{""stability"": 63.218002, ""difficulty"": 3.2245016}",63,2025-07-14T00:31:06.610110+00:00,
 6,culmination,n. climax/peak,2025-08-26T05:12:43.955187+00:00,"{""stability"": 42.45255, ""difficulty"": 5.263545}",42,2025-07-15T05:12:43.955187+00:00,
 7,prowess,n. skill/expertise,2025-08-13T00:44:38.212802+00:00,"{""stability"": 18.839785, ""difficulty"": 8.999768}",19,2025-07-25T00:44:38.212802+00:00,
@@ -35,3 +35,4 @@ id,word,explanation,due,memory_state,scheduled_days,last_review,sentence
 34,perilous,adj. full of danger,2025-08-30T00:53:50.718086+00:00,"{""stability"": 17.607115, ""difficulty"": 7.752159}",18,2025-08-12T00:53:50.718086+00:00,
 35,mitigate,v. reduce/lessen the severity,2025-08-21T00:49:26.118235+00:00,"{""stability"": 17.059584, ""difficulty"": 6.0220227}",17,2025-08-04T00:49:26.118235+00:00,
 36,concrete,adj. specific/n. 混凝土,2025-08-19T05:08:52.192106+00:00,"{""stability"": 10.738925, ""difficulty"": 5.272968}",11,2025-08-08T05:08:52.192106+00:00,
+37,concierge,n. hotel staff who assist guests,2025-08-16T00:35:59.775418+00:00,"{""stability"": 3.173, ""difficulty"": 5.2824345}",3,2025-08-13T00:35:59.775418+00:00,

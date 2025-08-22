@@ -8,7 +8,7 @@ id,word,explanation,due,memory_state,scheduled_days,last_review,sentence
 7,prowess,n. skill/expertise,2025-09-16T01:02:44.700160+00:00,"{""stability"": 32.944088, ""difficulty"": 8.973202}",33,2025-08-14T01:02:44.700160+00:00,
 8,skepticism,n. doubt/questioning,2025-09-18T00:35:47.222105+00:00,"{""stability"": 38.037067, ""difficulty"": 8.061981}",38,2025-08-11T00:35:47.222105+00:00,
 9,ostensibly,adv. Apparently true but not,2025-08-26T05:12:22.439232+00:00,"{""stability"": 42.45255, ""difficulty"": 5.263545}",42,2025-07-15T05:12:22.439232+00:00,
-10,admonish,v. warn,2025-08-22T01:43:11.893842+00:00,"{""stability"": 23.755182, ""difficulty"": 8.403477}",24,2025-07-29T01:43:11.893842+00:00,
+10,admonish,v. warn,2025-08-25T03:13:25.536897+00:00,"{""stability"": 3.0597863, ""difficulty"": 8.895395}",3,2025-08-22T03:13:25.536897+00:00,
 11,efficacy,n. effectiveness,2025-11-15T00:50:12.808644+00:00,"{""stability"": 103.482574, ""difficulty"": 4.5050673}",103,2025-08-04T00:50:12.808644+00:00,
 12,vehemently,adv. In a forceful manner,2025-09-16T00:35:40.968635+00:00,"{""stability"": 35.7577, ""difficulty"": 8.253198}",36,2025-08-11T00:35:40.968635+00:00,
 13,adhere,v. stick to/follow,2025-08-31T00:55:36.844403+00:00,"{""stability"": 33.549477, ""difficulty"": 5.393172}",34,2025-07-28T00:55:36.844403+00:00,
@@ -24,7 +24,7 @@ id,word,explanation,due,memory_state,scheduled_days,last_review,sentence
 23,exacerbate,v. worsen/intensify,2025-09-07T08:32:08.972213+00:00,"{""stability"": 31.43627, ""difficulty"": 8.555461}",31,2025-08-07T08:32:08.972213+00:00,
 24,predominantly,adv. mainly/mostly,2025-08-26T05:13:00.515761+00:00,"{""stability"": 42.45255, ""difficulty"": 5.263545}",42,2025-07-15T05:13:00.515761+00:00,
 25,stigma,n. mark of shame/disgrace,2025-09-25T00:44:19.673516+00:00,"{""stability"": 55.59707, ""difficulty"": 6.235248}",56,2025-07-31T00:44:19.673516+00:00,
-26,precipitate,v. cause to happen suddenly,2025-08-21T05:08:47.100305+00:00,"{""stability"": 12.830841, ""difficulty"": 9.051604}",13,2025-08-08T05:08:47.100305+00:00,The sudden withdrawal of funding threatened to precipitate a crisis in the research project.
+26,precipitate,v. cause to happen suddenly,2025-09-13T01:03:11.087858+00:00,"{""stability"": 22.224884, ""difficulty"": 9.024799}",22,2025-08-22T01:03:11.087858+00:00,The sudden withdrawal of funding threatened to precipitate a crisis in the research project.
 27,staggering,adj. very shocking or suprising,2025-09-02T00:35:25.385863+00:00,"{""stability"": 15.27948, ""difficulty"": 8.032989}",15,2025-08-18T00:35:25.385863+00:00,
 28,etch sth in the annals of,铭刻在...历史,2025-09-14T00:50:31.127552+00:00,"{""stability"": 40.55787, ""difficulty"": 5.263545}",41,2025-08-04T00:50:31.127552+00:00,
 29,unparalleled,adj. without equal or match,2025-10-04T01:04:24.823060+00:00,"{""stability"": 49.539433, ""difficulty"": 6.0091543}",50,2025-08-15T01:04:24.823060+00:00,
@@ -33,6 +33,6 @@ id,word,explanation,due,memory_state,scheduled_days,last_review,sentence
 32,paramount,adj. of the highest importance,2025-09-03T00:35:33.703637+00:00,"{""stability"": 16.3865, ""difficulty"": 6.757836}",16,2025-08-18T00:35:33.703637+00:00,
 33,stark,adj. sharp or clear in contrast,2025-09-12T05:08:35.532372+00:00,"{""stability"": 34.57762, ""difficulty"": 5.263545}",35,2025-08-08T05:08:35.532372+00:00,
 34,perilous,adj. full of danger,2025-08-30T00:53:50.718086+00:00,"{""stability"": 17.607115, ""difficulty"": 7.752159}",18,2025-08-12T00:53:50.718086+00:00,
-35,mitigate,v. reduce/lessen the severity,2025-08-21T00:49:26.118235+00:00,"{""stability"": 17.059584, ""difficulty"": 6.0220227}",17,2025-08-04T00:49:26.118235+00:00,
+35,mitigate,v. reduce/lessen the severity,2025-10-10T01:03:15.061330+00:00,"{""stability"": 49.047443, ""difficulty"": 6.0091543}",49,2025-08-22T01:03:15.061330+00:00,
 36,concrete,adj. specific/n. 混凝土,2025-11-16T05:57:18.985294+00:00,"{""stability"": 87.77237, ""difficulty"": 4.5000334}",88,2025-08-20T05:57:18.985294+00:00,
 37,concierge,n. hotel staff who assist guests,2025-08-31T00:35:08.337073+00:00,"{""stability"": 12.949931, ""difficulty"": 5.272968}",13,2025-08-18T00:35:08.337073+00:00,

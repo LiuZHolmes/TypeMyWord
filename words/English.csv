@@ -1,6 +1,6 @@
 id,word,explanation,due,memory_state,scheduled_days,last_review,sentence
 1,burgeoning,adj. growing rapidly/surging,2025-09-27T05:16:48.336717+00:00,"{""stability"": 53.45967, ""difficulty"": 6.630902}",53,2025-08-05T05:16:48.336717+00:00,
-2,commence,v. begin/start,2025-08-28T01:02:40.668913+00:00,"{""stability"": 35.229244, ""difficulty"": 7.7042246}",35,2025-07-24T01:02:40.668913+00:00,
+2,commence,v. begin/start,2025-11-09T01:43:02.729114+00:00,"{""stability"": 73.23347, ""difficulty"": 7.683618}",73,2025-08-28T01:43:02.729114+00:00,
 3,fleet,n. group of ships/vehicles,2025-12-25T01:29:06.947008+00:00,"{""stability"": 120.11756, ""difficulty"": 5.2541656}",120,2025-08-27T01:29:06.947008+00:00,
 4,adorn,v. decorate,2025-08-28T01:47:03.750352+00:00,"{""stability"": 1.785447, ""difficulty"": 8.753659}",2,2025-08-26T01:47:03.750352+00:00,
 5,hail,v. praise,2025-09-15T00:31:06.610110+00:00,"{""stability"": 63.218002, ""difficulty"": 3.2245016}",63,2025-07-14T00:31:06.610110+00:00,

@@ -32,7 +32,7 @@ id,word,explanation,due,memory_state,scheduled_days,last_review,sentence
 31,bolster,v. support/strengthen,2025-11-02T05:26:02.845141+00:00,"{""stability"": 40.882084, ""difficulty"": 7.964019}",41,2025-09-22T05:26:02.845141+00:00,
 32,paramount,adj. of the highest importance,2025-10-14T03:38:55.642300+00:00,"{""stability"": 40.927135, ""difficulty"": 6.7415824}",41,2025-09-03T03:38:55.642300+00:00,
 33,stark,adj. sharp or clear in contrast,2025-12-30T05:09:44.333267+00:00,"{""stability"": 105.79972, ""difficulty"": 5.2541656}",106,2025-09-15T05:09:44.333267+00:00,
-34,perilous,adj. full of danger,2025-10-12T05:04:26.188687+00:00,"{""stability"": 40.524273, ""difficulty"": 7.731332}",41,2025-09-01T05:04:26.188687+00:00,
+34,perilous,adj. full of danger,2026-01-06T06:18:12.500815+00:00,"{""stability"": 84.81415, ""difficulty"": 7.7106004}",85,2025-10-13T06:18:12.500815+00:00,
 35,mitigate,v. reduce/lessen the severity,2026-02-13T03:26:01.952470+00:00,"{""stability"": 126.45861, ""difficulty"": 5.996345}",126,2025-10-10T03:26:01.952470+00:00,
 36,concrete,adj. specific/n. 混凝土,2025-11-16T05:57:18.985294+00:00,"{""stability"": 87.77237, ""difficulty"": 4.5000334}",88,2025-08-20T05:57:18.985294+00:00,
 37,concierge,n. hotel staff who assist guests,2025-12-11T05:04:43.038357+00:00,"{""stability"": 101.15686, ""difficulty"": 4.5000334}",101,2025-09-01T05:04:43.038357+00:00,

@@ -8,7 +8,7 @@ id,word,explanation,due,memory_state,scheduled_days,last_review,sentence
 7,prowess,n. skill/expertise,2025-11-10T02:53:31.216832+00:00,"{""stability"": 55.138493, ""difficulty"": 8.946757}",55,2025-09-16T02:53:31.216832+00:00,
 8,skepticism,n. doubt/questioning,2025-11-03T06:38:52.270204+00:00,"{""stability"": 46.470097, ""difficulty"": 8.352758}",46,2025-09-18T06:38:52.270204+00:00,
 9,ostensibly,adv. Apparently true but not,2025-12-25T01:29:19.590839+00:00,"{""stability"": 120.11756, ""difficulty"": 5.2541656}",120,2025-08-27T01:29:19.590839+00:00,
-10,admonish,v. warn,2025-10-29T05:09:51.190784+00:00,"{""stability"": 44.28415, ""difficulty"": 8.630673}",44,2025-09-15T05:09:51.190784+00:00,
+10,admonish,v. warn,2026-01-16T05:31:00.581210+00:00,"{""stability"": 78.388596, ""difficulty"": 8.605805}",78,2025-10-30T05:31:00.581210+00:00,
 11,efficacy,n. effectiveness,2025-11-15T00:50:12.808644+00:00,"{""stability"": 103.482574, ""difficulty"": 4.5050673}",103,2025-08-04T00:50:12.808644+00:00,
 12,vehemently,adv. In a forceful manner,2025-11-23T02:53:38.478811+00:00,"{""stability"": 68.235306, ""difficulty"": 8.230065}",68,2025-09-16T02:53:38.478811+00:00,
 13,adhere,v. stick to/follow,2025-12-08T05:04:30.767023+00:00,"{""stability"": 98.25636, ""difficulty"": 5.383196}",98,2025-09-01T05:04:30.767023+00:00,
@@ -24,7 +24,7 @@ id,word,explanation,due,memory_state,scheduled_days,last_review,sentence
 23,exacerbate,v. worsen/intensify,2025-11-04T02:34:46.954674+00:00,"{""stability"": 56.763283, ""difficulty"": 8.530938}",57,2025-09-08T02:34:46.954674+00:00,
 24,predominantly,adv. mainly/mostly,2026-05-29T01:29:40.084020+00:00,"{""stability"": 274.65543, ""difficulty"": 4.489132}",275,2025-08-27T01:29:40.084020+00:00,
 25,stigma,n. mark of shame/disgrace,2026-02-13T03:32:46.371010+00:00,"{""stability"": 140.06964, ""difficulty"": 6.221399}",140,2025-09-26T03:32:46.371010+00:00,
-26,precipitate,v. cause to happen suddenly,2025-10-24T05:10:44.674193+00:00,"{""stability"": 38.58239, ""difficulty"": 8.998118}",39,2025-09-15T05:10:44.674193+00:00,The sudden withdrawal of funding threatened to precipitate a crisis in the research project.
+26,precipitate,v. cause to happen suddenly,2026-01-05T05:31:08.039558+00:00,"{""stability"": 67.44071, ""difficulty"": 8.97156}",67,2025-10-30T05:31:08.039558+00:00,The sudden withdrawal of funding threatened to precipitate a crisis in the research project.
 27,staggering,adj. very shocking or suprising,2025-12-12T07:17:40.129910+00:00,"{""stability"": 66.01937, ""difficulty"": 7.9888525}",66,2025-10-07T07:17:40.129910+00:00,
 28,etch sth in the annals of,铭刻在...历史,2026-01-11T05:10:13.037220+00:00,"{""stability"": 118.28476, ""difficulty"": 5.2541656}",118,2025-09-15T05:10:13.037220+00:00,
 29,unparalleled,adj. without equal or match,2026-02-17T07:17:30.990920+00:00,"{""stability"": 132.57867, ""difficulty"": 5.996345}",133,2025-10-07T07:17:30.990920+00:00,
